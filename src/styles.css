@@ -1391,16 +1391,62 @@ button { font-family: inherit; }
 
 /* ============ RESPONSIVE ============ */
 @media (max-width: 960px) {
-  .pres-stage { padding: 18px 16px 28px; }
+  .presentation { height: 100vh; height: 100dvh; }
+  .pres-header { padding: 10px 14px; gap: 10px; }
+  .pres-logo { width: 34px; height: 34px; }
+  .pres-brand h1 { font-size: 15px; }
+  .pres-brand p { font-size: 11px; }
+  .pres-stage { padding: 18px 14px 28px; }
+  .pres-footer { flex-wrap: wrap; gap: 10px; padding: 10px 14px; }
+  .pres-progress { flex: 1 1 100%; order: 3; }
   .grid-2, .grid-3, .mac-cols, .journey-stage, .csma-layout, .topo-info-grid, .std-detail, .antenna-types, .glossary-groups {
     grid-template-columns: 1fr;
   }
+  .intro-hero h2 { font-size: clamp(30px, 9vw, 40px); }
   .intro-points { grid-template-columns: 1fr; }
   .pres-nav { display: none; }
   .gloss-hint { display: none; }
   .term-tip { max-width: 220px; }
+  .term-tip.floating { max-width: 240px; }
+  .card { padding: 16px; }
+  .slide-title { font-size: clamp(26px, 7vw, 32px); }
+  /* tabla con scroll horizontal */
+  .standards-wrap { overflow-x: auto; }
+  .standards-table { min-width: 700px; }
+  .standards-table td { padding: 10px 8px; }
+  /* trama 802.11 en filas */
+  .frame-diagram { flex-wrap: wrap; }
+  .frame-field { flex: 1 1 22%; border-bottom: 2px solid #fff; }
+  .ff-body { flex: 1 1 100%; }
+  /* estaciones apiladas */
+  .stations-row { flex-direction: column; }
+  .station { padding: 12px 8px; }
+  /* varios */
   .journey-controls .step-label { margin-left: 0; }
-  .journey-visual { min-height: 560px; }
+  .bssid-match { flex-wrap: wrap; }
+  .encap-layer .encap-name { flex-wrap: wrap; }
+  .antenna-stage svg { max-width: 100%; height: auto; }
+  .topo-canvas { padding: 12px; min-height: 0; }
+  .layer-bar { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .layer-bar .what { text-align: left; }
+  .medium-bar { font-size: 11px; padding: 0 8px; }
+  .fly-pill { font-size: 10px; }
+  .mg-term { min-width: 76px; }
+  .check-flow { max-width: none; }
+  .ap-box { padding: 14px; }
+  .backoff-slots { max-width: 230px; margin-left: auto; margin-right: auto; }
+  .journey-explain h3 { font-size: 18px; }
+  .field-info { min-height: 0; }
+  .wave-scene, .ap-scene { min-height: 0; }
+}
+
+@media (max-width: 560px) {
+  .frame-field { flex: 1 1 30%; font-size: 11px; }
+  .ff-body { flex: 1 1 100%; }
+  .pres-brand p { display: none; }
+  .journey-controls .play-btn { flex: 1 1 100%; justify-content: center; }
+  .scenario-toggles .scenario-btn { flex: 1 1 100%; justify-content: center; }
+  .grid-2, .grid-3, .topo-info-grid, .glossary-groups { gap: 12px; }
 }
 
 /* ============ REDUCED MOTION ============ */
